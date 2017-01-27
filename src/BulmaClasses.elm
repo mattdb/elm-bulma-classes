@@ -9,19 +9,19 @@ module BulmaClasses exposing
 
 ## Bulma CSS classes organized into nested record sets
 
-- [Modifiers that can be applied to any element](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/Bulma#element)
-- [Element classes and modifiers](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/Bulma#content)
-  + [Text, images, and icons](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/Bulma#content)
-  + [UI elements](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/Bulma#control)
-    * [Control](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/Bulma#control)
-    * [Buttons](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/Bulma#button)
-    * [Form elements](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/Bulma#input)
-    * [Indicators](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/Bulma#notification)
-- [Component classes and modifiers](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/Bulma#section)
-  + [Page layout](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/Bulma#section)
-  + [Section layout](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/Bulma#feature)
-  + [Navigation/controls UI](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/Bulma#menu)
-  + [Content/media UI](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/Bulma#card)
+- [Modifiers that can be applied to any element](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#element)
+- [Element classes and modifiers](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#content)
+  + [Text, images, and icons](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#content)
+  + [UI elements](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#control)
+    * [Control](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#control)
+    * [Buttons](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#button)
+    * [Form elements](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#input)
+    * [Indicators](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#notification)
+- [Component classes and modifiers](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#section)
+  + [Page layout](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#section)
+  + [Section layout](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#feature)
+  + [Navigation/controls UI](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#menu)
+  + [Content/media UI](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#card)
 
 
 # Modifiers that can be applied to any element
