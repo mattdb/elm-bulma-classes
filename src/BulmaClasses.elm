@@ -598,7 +598,7 @@ __Addon input modifier:__
 -}
 input : Input
 input =
-  { ui = "select"
+  { ui = "input"
   , display =
     { isInline = "is-inline"
     }
