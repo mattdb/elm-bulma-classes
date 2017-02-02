@@ -1,5 +1,5 @@
 {
-    "version": "1.0.4",
+    "version": "1.0.5",
     "summary": "Bulma CSS classes organized into nested record sets",
     "repository": "https://github.com/danielnarey/elm-bulma-classes.git",
     "license": "BSD3",

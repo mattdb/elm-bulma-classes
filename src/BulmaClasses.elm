@@ -344,9 +344,12 @@ heading =
   { title = "title"
   , subtitle = "subtitle"
   , size =
-    { isSmall = "is-small"
-    , isMedium = "is-medium"
-    , isLarge = "is-large"
+    { is1 = "is-1"
+    , is2 = "is-2"
+    , is3 = "is-3"
+    , is4 = "is-4"
+    , is5 = "is-5"
+    , is6 = "is-6"
     }
   }
 
@@ -396,19 +399,23 @@ __Control label:__
 __Grouping buttons or form elements:__
 
     control.isGrouped.left --> "is-grouped"
-    control.isGrouped.centered --> "is-grouped-centered"
-    control.isGrouped.right --> "is-grouped-right"
+    control.isGrouped.centered --> "is-grouped is-grouped-centered"
+    control.isGrouped.right --> "is-grouped is-grouped-right"
 
 __Attaching buttons or form elements inline:__
 
     control.hasAddons.left --> "has-addons"
-    control.hasAddons.centered --> "has-addons-centered"
-    control.hasAddons.right --> "has-addons-right"
+    control.hasAddons.centered --> "has-addons has-addons-centered"
+    control.hasAddons.right --> "has-addons has-addons-right"
 
 __Displaying an icon inside a form element:__
 
     control.hasIcon.left --> "has-icon"
-    control.hasIcon.right --> "has-icon-right"
+    control.hasIcon.right --> "has-icon has-icon-right"
+
+__Layout modifier:__
+
+    control.layout.isHorizontal --> "is-horizontal"
 
 __State modifier:__
 
@@ -425,17 +432,20 @@ control =
   , label = "control-label"
   , isGrouped =
     { left = "is-grouped"
-    , centered = "is-grouped-centered"
-    , right = "is-grouped-right"
+    , centered = "is-grouped is-grouped-centered"
+    , right = "is-grouped is-grouped-right"
     }
   , hasAddons =
     { left = "has-addons"
-    , centered = "has-addons-centered"
-    , right = "has-addons-right"
+    , centered = "has-addons has-addons-centered"
+    , right = "has-addons has-addons-right"
     }
   , hasIcon =
     { left = "has-icon"
-    , right = "has-icon-right"
+    , right = "has-icon has-icon-right"
+    }
+  , layout =
+    { isHorizontal = "is-horizontal"
     }
   , state =
     { isLoading = "is-loading"
@@ -1158,7 +1168,7 @@ __Level items:__
 
 __Responsive modifier (level container):__
 
-    level.mobileOrientation.isHorizontal --> "is-mobile"
+    level.mobile.isHorizontal --> "is-mobile"
 
 -}
 level : Level
@@ -1167,7 +1177,7 @@ level =
   , left = "level-left"
   , right = "level-right"
   , item = "level-item"
-  , mobileOrientation =
+  , mobile =
     { isHorizontal = "is-mobile"
     }
   }

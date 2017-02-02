@@ -125,9 +125,12 @@ type alias Heading =
   { title : String
   , subtitle : String
   , size :
-    { isSmall : String
-    , isMedium : String
-    , isLarge : String
+    { is1 : String
+    , is2 : String
+    , is3 : String
+    , is4 : String
+    , is5 : String
+    , is6 : String
     }
   }
 
@@ -194,6 +197,9 @@ type alias Control =
   , hasIcon :
     { left : String
     , right : String
+    }
+  , layout :
+    { isHorizontal : String
     }
   , state :
     { isLoading : String
@@ -536,7 +542,7 @@ type alias Level =
   , left : String
   , right : String
   , item : String
-  , mobileOrientation :
+  , mobile :
     { isHorizontal : String
     }
   }
