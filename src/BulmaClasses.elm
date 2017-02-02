@@ -96,7 +96,7 @@ __Element sizing modifiers ([docs](http://bulma.io/documentation/modifiers/helpe
 
 __Display modifiers with responsive classes ([docs](http://bulma.io/documentation/modifiers/responsive-helpers/)):__
 
-    element.display.isBlock.always --> "is-block"
+    element.display.isBlock.always --> "is-block-touch is-block-desktop"
     element.display.isBlock.mobile --> "is-block-mobile"
     element.display.isBlock.tablet --> "is-block-tablet"
     element.display.isBlock.tabletOnly --> "is-block-tablet-only"
@@ -105,7 +105,7 @@ __Display modifiers with responsive classes ([docs](http://bulma.io/documentatio
     element.display.isBlock.desktopOnly --> "is-block-desktop-only"
     element.display.isBlock.widescreen -->"is-block-widescreen"
 
-    element.display.isFlex.always --> "is-flex"
+    element.display.isFlex.always --> "is-flex-touch is-flex-desktop"
     element.display.isFlex.mobile --> "is-flex-mobile"
     element.display.isFlex.tablet --> "is-flex-tablet"
     element.display.isFlex.tabletOnly --> "is-flex-tablet-only"
@@ -114,7 +114,7 @@ __Display modifiers with responsive classes ([docs](http://bulma.io/documentatio
     element.display.isFlex.desktopOnly --> "is-flex-desktop-only"
     element.display.isFlex.widescreen -->"is-flex-widescreen"
 
-    element.display.isInline.always --> "is-inline"
+    element.display.isInline.always --> "is-inline-touch is-inline-desktop"
     element.display.isInline.mobile --> "is-inline-mobile"
     element.display.isInline.tablet --> "is-inline-tablet"
     element.display.isInline.tabletOnly --> "is-inline-tablet-only"
@@ -123,7 +123,7 @@ __Display modifiers with responsive classes ([docs](http://bulma.io/documentatio
     element.display.isInline.desktopOnly --> "is-inline-desktop-only"
     element.display.isInline.widescreen -->"is-inline-widescreen"
 
-    element.display.isInlineBlock.always --> "is-inline-block"
+    element.display.isInlineBlock.always --> ""is-inline-block-touch is-inline-block-desktop"
     element.display.isInlineBlock.mobile --> "is-inline-block-mobile"
     element.display.isInlineBlock.tablet --> "is-inline-block-tablet"
     element.display.isInlineBlock.tabletOnly --> "is-inline-block-tablet-only"
@@ -132,7 +132,7 @@ __Display modifiers with responsive classes ([docs](http://bulma.io/documentatio
     element.display.isInlineBlock.desktopOnly --> "is-inline-block-desktop-only"
     element.display.isInlineBlock.widescreen -->"is-inline-block-widescreen"
 
-    element.display.isInlineFlex.always --> "is-inline-flex"
+    element.display.isInlineFlex.always --> "is-inline-flex-touch is-inline-flex-desktop"
     element.display.isInlineFlex.mobile --> "is-inline-flex-mobile"
     element.display.isInlineFlex.tablet --> "is-inline-flex-tablet"
     element.display.isInlineFlex.tabletOnly --> "is-inline-flex-tablet-only"
@@ -180,7 +180,7 @@ element =
     }
   , display =
     { isBlock =
-      { always = "is-block"
+      { always = "is-block-touch is-block-desktop"
       , mobile = "is-block-mobile"
       , tablet = "is-block-tablet"
       , tabletOnly = "is-block-tablet-only"
@@ -190,7 +190,7 @@ element =
       , widescreen = "is-block-widescreen"
       }
     , isFlex =
-      { always = "is-flex"
+      { always = "is-flex-touch is-flex-desktop"
       , mobile = "is-flex-mobile"
       , tablet = "is-flex-tablet"
       , tabletOnly = "is-flex-tablet-only"
@@ -200,7 +200,7 @@ element =
       , widescreen = "is-flex-widescreen"
       }
     , isInline =
-      { always = "is-inline"
+      { always = "is-inline-touch is-inline-desktop"
       , mobile = "is-inline-mobile"
       , tablet = "is-inline-tablet"
       , tabletOnly = "is-inline-tablet-only"
@@ -210,7 +210,7 @@ element =
       , widescreen = "is-inline-widescreen"
       }
     , isInlineBlock =
-      { always = "is-inline-block"
+      { always = "is-inline-block-touch is-inline-block-desktop"
       , mobile = "is-inline-block-mobile"
       , tablet = "is-inline-block-tablet"
       , tabletOnly = "is-inline-block-tablet-only"
@@ -220,7 +220,7 @@ element =
       , widescreen = "is-inline-block-widescreen"
       }
     , isInlineFlex =
-      { always = "is-inline-flex"
+      { always = "is-inline-flex-touch is-inline-flex-desktop"
       , mobile = "is-inline-flex-mobile"
       , tablet = "is-inline-flex-tablet"
       , tabletOnly = "is-inline-flex-tablet-only"
