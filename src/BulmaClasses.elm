@@ -1,8 +1,8 @@
 module BulmaClasses exposing
   ( element, content, image, heading, icon, control, button, delete, input
   , textarea, checkbox, radio, select, label, help, notification, progress, tag
-  , section, footer, nav, hero, level, feature, columns, tile, table, menu, tabs
-  , panel, pagination, card, media, message, modal
+  , number, section, footer, nav, hero, level, feature, columns, tile, table
+  , menu, tabs, panel, pagination, card, media, message, modal
   )
 
 {-|
@@ -44,7 +44,7 @@ module BulmaClasses exposing
 @docs input, textarea, checkbox, radio, select, label, help
 
 ### Indicators
-@docs notification, progress, tag
+@docs notification, progress, tag, number
 
 # Component classes and modifiers
 
@@ -980,6 +980,7 @@ __Number UI element:__
 
     number.ui --> "number"
 -}
+number : Number
 number =
   { ui = "number"
   }
