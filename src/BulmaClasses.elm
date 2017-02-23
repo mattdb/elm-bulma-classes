@@ -9,19 +9,19 @@ module BulmaClasses exposing
 
 ## Bulma CSS classes organized into nested record sets
 
-- [Modifiers that can be applied to any element](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#element)
-- [Element classes and modifiers](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#content)
-  + [Text, images, and icons](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#content)
-  + [UI elements](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#control)
-    * [Control](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#control)
-    * [Buttons](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#button)
-    * [Form elements](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#input)
-    * [Indicators](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#notification)
-- [Component classes and modifiers](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#section)
-  + [Page layout](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#section)
-  + [Section layout](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#feature)
-  + [Navigation/controls UI](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#menu)
-  + [Content/media UI](http://package.elm-lang.org/packages/danielnarey/elm-bulma-classes/latest/BulmaClasses#card)
+- [Modifiers that can be applied to any element](#modifiers-that-can-be-applied-to-any-element)
+- [Element classes and modifiers](#element-classes-and-modifiers)
+  + [Text, images, and icons](#text-images-and-icons)
+  + [UI elements](#ui-elements)
+    * [Control](#control)
+    * [Buttons](#buttons)
+    * [Form elements](#form-elements)
+    * [Indicators](#indicators)
+- [Component classes and modifiers](#component-classes-and-modifiers)
+  + [Page layout](#page-layout)
+  + [Section layout](#section-layout)
+  + [Navigation/controls UI](#navigation-controls-ui)
+  + [Content/media UI](#content-media-ui)
 
 
 # Modifiers that can be applied to any element
@@ -972,6 +972,18 @@ tag =
     , isBlack = "is-black"
     }
   }
+
+
+{-| Special formatting for numerical output
+
+__Number UI element:__
+
+    number.ui --> "number"
+-}
+number =
+  { ui = "number"
+  }
+
 
 -- Page layout components
 

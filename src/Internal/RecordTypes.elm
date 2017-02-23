@@ -401,6 +401,11 @@ type alias Tag =
   }
 
 
+type alias Number =
+  { ui : String
+  }
+
+
 type alias Section =
   { container : String
   , spacing :
