@@ -1,11 +1,48 @@
-module Internal.RecordTypes exposing (..)
+module Internal.Types exposing (..)
 
+type alias Bulma =
+  { properties : Properties
+  , box : Box
+  , content : Content
+  , image : Image
+  , heading : Heading
+  , icon : Icon
+  , field : Field
+  , control : Control
+  , button : Button
+  , delete : Delete
+  , input : Input
+  , textarea : Textarea
+  , checkbox : Checkbox
+  , radio : Radio
+  , select : Select
+  , label : Label
+  , help : Help
+  , notification : Notification
+  , progress : Progress
+  , tag : Tag
+  , number : Number
+  , section : Section
+  , footer : Footer
+  , nav : Nav
+  , hero : Hero
+  , level : Level
+  , feature : Feature
+  , columns : Columns
+  , tile : Tile
+  , table : Table
+  , menu : Menu
+  , tabs : Tabs
+  , panel : Panel
+  , pagination : Pagination
+  , card : Card
+  , media : Media
+  , message : Message
+  , modal : Modal
+  }
 
-type alias Element =
-  { style :
-    { box : String
-    }
-  , float :
+type alias Properties =
+  { float :
     { isClearfix : String
     , isPulledLeft : String
     , isPulledRight : String
@@ -91,6 +128,11 @@ type alias Element =
 }
 
 
+type alias Box =
+  { container : String
+  }
+
+
 type alias Content =
   { container : String
   , size :
@@ -132,6 +174,9 @@ type alias Heading =
     , is5 : String
     , is6 : String
     }
+  , layout :
+    { isSpaced : String
+    }
   }
 
 
@@ -141,6 +186,41 @@ type alias Icon =
     { isSmall : String
     , isMedium : String
     , isLarge : String
+    }
+  }
+
+
+type alias Field =
+  { container : String
+  , label : String
+  , body : String
+  , isGrouped :
+    { left : String
+    , centered : String
+    , right : String
+    }
+  , hasAddons :
+    { left : String
+    , centered : String
+    , right : String
+    }
+  , layout :
+    { isHorizontal : String
+    }
+  }
+
+
+type alias Control =
+  { container : String
+  , hasIcon :
+    { left : String
+    , right : String
+    }
+  , state :
+    { isLoading : String
+    }
+  , sizing :
+    { isExpanded : String
     }
   }
 
@@ -174,35 +254,6 @@ type alias Button =
     , isLight : String
     , isDark : String
     , isBlack : String
-    }
-  , addon :
-    { isExpanded : String
-    }
-  }
-
-
-type alias Control =
-  { container : String
-  , label : String
-  , isGrouped :
-    { left : String
-    , centered : String
-    , right : String
-    }
-  , hasAddons :
-    { left : String
-    , centered : String
-    , right : String
-    }
-  , hasIcon :
-    { left : String
-    , right : String
-    }
-  , layout :
-    { isHorizontal : String
-    }
-  , state :
-    { isLoading : String
     }
   , addon :
     { isExpanded : String
@@ -643,6 +694,11 @@ type alias Pagination =
   , position :
     { isCentered : String
     , isRight : String
+    }
+  , size :
+    { isSmall : String
+    , isMedium : String
+    , isLarge : String
     }
   }
 

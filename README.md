@@ -14,6 +14,6 @@ Bulma is a great framework to use with Elm because:
 ### Why use this package and not just the class names?
 There are two ways you can mess up when learning to use a CSS framework: you can try to use classes that don't exist, or you can apply classes and modifiers incorrectly (e.g., applying the class to the child when it should be applied to the parent, or vice versa).
 
-This package helps to prevent both types of errors by storing Bulma class names in nested record sets. If you try to use something that doesn't exist, the Elm compiler will let you know. The nested record names also help you to figure out which classes should be applied to which elements so that you don't have to go back to the documentation as often.
+This package helps to prevent both types of errors by storing Bulma class names in a nested record set. If you try to use something that doesn't exist, the Elm compiler will let you know. The nested record names also help you to figure out which classes should be applied to which elements so that you don't have to go back to the documentation as often.
 
-An added benefit of using this package is that you can use the Elm REPL to get available class names. For example, if you want to know all of the size modifiers that can be used on an image container, just type `image.size` into the REPL.
+An added benefit of using this package is that you can use the Elm REPL to get available class names. For example, if you want to know all of the size modifiers that can be used on an image container, just type `bulma.image.size` into the REPL.
