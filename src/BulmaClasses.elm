@@ -728,10 +728,11 @@ __Element classes for navigation buttons:__
     bulma.pagination.previous --> "pagination-previous"
     bulma.pagination.next --> "pagination-next"
 
-__Element classes for pagination list:__
+__Element classes and modifiers for pagination list:__
 
     bulma.pagination.list.container --> "pagination-list"
-    bulma.pagination.list.link --> "pagination-link"
+    bulma.pagination.list.link.ui --> "pagination-link"
+    bulma.pagination.list.link.state.isCurrent --> "is-current"
     bulma.pagination.list.ellipsis --> "pagination-ellipsis"
 
 __Position modifiers for pagination list (pagination container):__

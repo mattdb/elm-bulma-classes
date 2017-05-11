@@ -688,7 +688,12 @@ type alias Pagination =
   , next : String
   , list :
     { container : String
-    , link : String
+    , link :
+      { ui : String
+      , state :
+        { isCurrent : String
+        }
+      }
     , ellipsis : String
     }
   , position :

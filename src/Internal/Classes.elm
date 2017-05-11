@@ -1594,7 +1594,12 @@ pagination =
   , next = "pagination-next"
   , list =
     { container = "pagination-list"
-    , link = "pagination-link"
+    , link =
+      { ui = "pagination-link"
+      , state =
+        { isCurrent = "is-currrent"  
+        }
+      }
     , ellipsis = "pagination-ellipsis"
     }
   , position =
