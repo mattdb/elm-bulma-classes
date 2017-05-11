@@ -682,6 +682,7 @@ type alias Panel =
   , block :
     { container : String
     , icon : String
+    , list : String
     , state :
       { isActive : String
       }

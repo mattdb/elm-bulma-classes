@@ -5,154 +5,10 @@ module Internal.Classes exposing
   , tile, table, menu, tabs, panel, pagination, box, card, media, message, modal
   )
 
-{-|
-
-## Bulma CSS classes organized into nested record sets
-
-- [Modifiers that can be applied to any element](#modifiers-that-can-be-applied-to-any-element)
-- [Element classes and modifiers](#element-classes-and-modifiers)
-  + [Text, images, and icons](#text-images-and-icons)
-  + [UI elements](#ui-elements)
-    * [Control](#control)
-    * [Buttons](#buttons)
-    * [Form elements](#form-elements)
-    * [Indicators](#indicators)
-- [Component classes and modifiers](#component-classes-and-modifiers)
-  + [Page layout](#page-layout)
-  + [Section layout](#section-layout)
-  + [Navigation/controls UI](#navigation-controls-ui)
-  + [Content/media UI](#content-media-ui)
-
-
-# Modifiers that can be applied to any element
-@docs element
-
-# Element classes and modifiers
-
-## Text, images, and icons
-@docs content, image, heading, icon
-
-## UI elements
-
-### Control
-@docs control
-
-### Buttons
-@docs button, delete
-
-### Form elements
-@docs input, textarea, checkbox, radio, select, label, help
-
-### Indicators
-@docs notification, progress, tag, number
-
-# Component classes and modifiers
-
-## Page layout
-@docs section, footer, nav, hero, level
-
-## Section layout
-@docs feature, columns, tile, table
-
-## Navigation/controls UI
-@docs menu, tabs, panel, pagination
-
-## Content/media UI
-@docs card, media, message, modal
-
--}
 
 import Internal.Types exposing (..)
 
--- Modifiers that can be applied to any element
 
-{-| *Bulma is simply a collection of CSS classes.* The following are classes
-that modify generic properties.
-
-Docs: http://bulma.io/documentation/overview/classes/
-
-__Float modifiers ([docs](http://bulma.io/documentation/modifiers/helpers/)):__
-
-    bulma.properties.float.isClearfix --> "is-clearfix"
-    bulma.properties.float.isPulledLeft --> "is-pulled-left"
-    bulma.properties.float.isPulledRight --> "is-pulled-right"
-
-__Text alignment modifiers ([docs](http://bulma.io/documentation/modifiers/helpers/)):__
-
-    bulma.properties.alignment.hasTextCentered --> "has-text-centered"
-    bulma.properties.alignment.hasTextLeft --> "has-text-left"
-    bulma.properties.alignment.hasTextRight --> "has-text-right"
-
-__Element sizing modifiers ([docs](http://bulma.io/documentation/modifiers/helpers/)):__
-
-    bulma.properties.sizing.isOverlay --> "is-overlay"
-    bulma.properties.sizing.isFullwidth --> "is-fullwidth"
-    bulma.properties.sizing.isMarginless --> "is-marginless"
-    bulma.properties.sizing.isPaddingless --> "is-paddingless"
-
-__Display modifiers with responsive classes ([docs](http://bulma.io/documentation/modifiers/responsive-helpers/)):__
-
-    bulma.properties.display.isBlock.always --> "is-block-touch is-block-desktop"
-    bulma.properties.display.isBlock.mobile --> "is-block-mobile"
-    bulma.properties.display.isBlock.tablet --> "is-block-tablet"
-    bulma.properties.display.isBlock.tabletOnly --> "is-block-tablet-only"
-    bulma.properties.display.isBlock.touch --> "is-block-touch"
-    bulma.properties.display.isBlock.desktop --> "is-block-desktop"
-    bulma.properties.display.isBlock.desktopOnly --> "is-block-desktop-only"
-    bulma.properties.display.isBlock.widescreen -->"is-block-widescreen"
-
-    bulma.properties.display.isFlex.always --> "is-flex-touch is-flex-desktop"
-    bulma.properties.display.isFlex.mobile --> "is-flex-mobile"
-    bulma.properties.display.isFlex.tablet --> "is-flex-tablet"
-    bulma.properties.display.isFlex.tabletOnly --> "is-flex-tablet-only"
-    bulma.properties.display.isFlex.touch --> "is-flex-touch"
-    bulma.properties.display.isFlex.desktop --> "is-flex-desktop"
-    bulma.properties.display.isFlex.desktopOnly --> "is-flex-desktop-only"
-    bulma.properties.display.isFlex.widescreen -->"is-flex-widescreen"
-
-    bulma.properties.display.isInline.always --> "is-inline-touch is-inline-desktop"
-    bulma.properties.display.isInline.mobile --> "is-inline-mobile"
-    bulma.properties.display.isInline.tablet --> "is-inline-tablet"
-    bulma.properties.display.isInline.tabletOnly --> "is-inline-tablet-only"
-    bulma.properties.display.isInline.touch --> "is-inline-touch"
-    bulma.properties.display.isInline.desktop --> "is-inline-desktop"
-    bulma.properties.display.isInline.desktopOnly --> "is-inline-desktop-only"
-    bulma.properties.display.isInline.widescreen -->"is-inline-widescreen"
-
-    bulma.properties.display.isInlineBlock.always --> ""is-inline-block-touch is-inline-block-desktop"
-    bulma.properties.display.isInlineBlock.mobile --> "is-inline-block-mobile"
-    bulma.properties.display.isInlineBlock.tablet --> "is-inline-block-tablet"
-    bulma.properties.display.isInlineBlock.tabletOnly --> "is-inline-block-tablet-only"
-    bulma.properties.display.isInlineBlock.touch --> "is-inline-block-touch"
-    bulma.properties.display.isInlineBlock.desktop --> "is-inline-block-desktop"
-    bulma.properties.display.isInlineBlock.desktopOnly --> "is-inline-block-desktop-only"
-    bulma.properties.display.isInlineBlock.widescreen -->"is-inline-block-widescreen"
-
-    bulma.properties.display.isInlineFlex.always --> "is-inline-flex-touch is-inline-flex-desktop"
-    bulma.properties.display.isInlineFlex.mobile --> "is-inline-flex-mobile"
-    bulma.properties.display.isInlineFlex.tablet --> "is-inline-flex-tablet"
-    bulma.properties.display.isInlineFlex.tabletOnly --> "is-inline-flex-tablet-only"
-    bulma.properties.display.isInlineFlex.touch --> "is-inline-flex-touch"
-    bulma.properties.display.isInlineFlex.desktop --> "is-inline-flex-desktop"
-    bulma.properties.display.isInlineFlex.desktopOnly --> "is-inline-flex-desktop-only"
-    bulma.properties.display.isInlineFlex.widescreen --> "is-inline-flex-widescreen"
-
-__Visibility modifier with responsive classes ([docs](http://bulma.io/documentation/modifiers/responsive-helpers/)):__
-
-    bulma.properties.visability.isHidden.always --> "is-hidden"
-    bulma.properties.visability.isHidden.mobile --> "is-hidden-mobile"
-    bulma.properties.visability.isHidden.tablet --> "is-hidden-tablet"
-    bulma.properties.visability.isHidden.tabletOnly -->"is-hidden-tablet-only"
-    bulma.properties.visability.isHidden.touch --> "is-hidden-touch"
-    bulma.properties.visability.isHidden.desktop --> "is-hidden-desktop"
-    bulma.properties.visability.isHidden.desktopOnly --> "is-hidden-desktop-only"
-    bulma.properties.visability.isHidden.widescreen --> "is-hidden-widescreen"
-
-__Interaction modifier ([docs](http://bulma.io/documentation/modifiers/helpers/)):__
-
-    bulma.properties.interaction.isUnselectable --> "is-unselectable"
-
--}
 properties : Properties
 properties =
   { float =
@@ -241,24 +97,6 @@ properties =
   }
 
 
--- Wrappers and modifiers for content and images
-
-{-| *A single class to handle WYSIWYG generated content, where only HTML tags are
-available.*
-
-Docs: http://bulma.io/documentation/elements/content/
-
-__Content wrapper:__
-
-    content.container --> "content"
-
-__Size modifiers:__
-
-    content.size.isSmall --> "is-small"
-    content.size.isMedium --> "is-medium"
-    content.size.isLarge --> "is-large"
-
--}
 content : Content
 content =
   { container = "content"
@@ -269,31 +107,7 @@ content =
     }
   }
 
-{-| *A container for responsive images.*
 
-Docs: http://bulma.io/documentation/elements/image/
-
-__Image wrapper:__
-
-    image.container --> "image"
-
-__Size modifiers:__
-
-    image.size.is16X16 --> "is-16x16"
-    image.size.is24x24 --> "is-24x24"
-    image.size.is32x32 --> "is-32x32"
-    image.size.is48x48 --> "is-48x48"
-    image.size.is64x64 --> "is-64x64"
-    image.size.is96x96 --> "is-96x96"
-    image.size.is128x128 --> "is-128x128"
-    image.size.isSquare --> "is-square"
-    image.size.is1by1 --> "is-1by1"
-    image.size.is4by3 --> "is-4by3"
-    image.size.is3by2 --> "is-3by2"
-    image.size.is16by9 --> "is-16by9"
-    image.size.is2by1 --> "is-2by1"
-
--}
 image : Image
 image =
   { container = "image"
@@ -316,26 +130,7 @@ image =
 
 -- Classes and modifiers for special text
 
-{-| *Simple headings to add depth to your page.*
 
-Docs: http://bulma.io/documentation/elements/title/
-
-__Text styling classes:__
-
-    heading.title --> "title"
-    heading.subtitle --> "subtitle"
-
-__Size modifiers:__
-
-    heading.size.isSmall --> "is-small"
-    heading.size.isMedium --> "is-medium"
-    heading.size.isLarge --> "is-large"
-
-__Layout modifier:__
-
-    heading.layout.isSpaced --> "is-spaced"
-
--}
 heading : Heading
 heading =
   { title = "title"
@@ -353,21 +148,7 @@ heading =
     }
   }
 
-{-| Wrapper for Font Awesome icons.
 
-Docs: http://bulma.io/documentation/elements/icon/
-
-__Icon wrapper:__
-
-    icon.container --> "icon"
-
-__Size modifiers:__
-
-    icon.size.isSmall --> "is-small"
-    icon.size.isMedium --> "is-medium"
-    icon.size.isLarge --> "is-large"
-
--}
 icon : Icon
 icon =
   { container = "icon"
@@ -383,35 +164,7 @@ icon =
 
 -- Field
 
-{-| A wrapper for a control and its label, or for a control group.
 
-Docs: http://bulma.io/documentation/elements/form/
-
-__Field wrapper:__
-
-    field.container --> "field"
-
-__Field label:__
-
-    field.label --> "field-label"
-
-__Grouping buttons or form elements:__
-
-    field.isGrouped.left --> "is-grouped"
-    field.isGrouped.centered --> "is-grouped is-grouped-centered"
-    field.isGrouped.right --> "is-grouped is-grouped-right"
-
-__Attaching buttons or form elements inline:__
-
-    field.hasAddons.left --> "has-addons"
-    field.hasAddons.centered --> "has-addons has-addons-centered"
-    field.hasAddons.right --> "has-addons has-addons-right"
-
-__Layout modifier:__
-
-    field.layout.isHorizontal --> "is-horizontal"
-
--}
 field : Field
 field =
   { container = "field"
@@ -435,29 +188,7 @@ field =
 
 -- Control
 
-{-| A wrapper for input, select, and textarea elements to maintain consistent
-spacing and allow use of icons as visual cues in input fields.
 
-Docs: http://bulma.io/documentation/elements/form/
-
-__Control wrapper:__
-
-    control.container --> "control"
-
-__Displaying an icon inside a form element:__
-
-    control.hasIcon.left --> "has-icon"
-    control.hasIcon.right --> "has-icon has-icon-right"
-
-__State modifier:__
-
-    control.state.isLoading --> "is-loading"
-
-__Sizing modifier for a grouped control:__
-
-    control.sizing.isExpanded --> "is-expanded"
-
--}
 control : Control
 control =
   { container = "control"
@@ -476,51 +207,7 @@ control =
 
 --Buttons
 
-{-| *The classic button, in different colors, sizes, and states.*
 
-Docs: http://bulma.io/documentation/elements/button/
-
-__Button UI element:__
-
-    button.ui --> "button"
-
-__Style modifiers:__
-
-    button.style.isLink --> "is-link"
-    button.style.isOutlined --> "is-outlined"
-    button.style.isInverted --> "is-inverted"
-
-__Size modifiers:__
-
-    button.size.isSmall --> "is-small"
-    button.size.isMedium --> "is-medium"
-    button.size.isLarge --> "is-large"
-
-__State modifiers:__
-
-    button.state.isHovered --> "is-hovered"
-    button.state.isFocused --> "is-focused"
-    button.state.isActive --> "is-active"
-    button.state.isLoading --> "is-loading"
-    button.state.isDisabled --> "is-disabled"
-
-__Color modifiers:__
-
-    button.color.isPrimary --> "is-primary"
-    button.color.isInfo --> "is-info"
-    button.color.isSuccess --> "is-success"
-    button.color.isWarning --> "is-warning"
-    button.color.isDanger --> "is-danger"
-    button.color.isWhite --> "is-white"
-    button.color.isLight --> "is-light"
-    button.color.isDark --> "is-dark"
-    button.color.isBlack --> "is-black"
-
-__Addon button modifier:__
-
-    button.addon.isExpanded --> "is-expanded"
-
--}
 button : Button
 button =
   { ui = "button"
@@ -557,21 +244,7 @@ button =
     }
   }
 
-{-| *A versatile delete cross.*
 
-Docs: http://bulma.io/documentation/elements/delete/
-
-__Delete UI element:__
-
-    delete.ui --> "delete"
-
-__Size modifiers:__
-
-    delete.size.isSmall --> "is-small"
-    delete.size.isMedium --> "is-medium"
-    delete.size.isLarge --> "is-large"
-
--}
 delete : Delete
 delete =
   { ui = "delete"
@@ -585,46 +258,7 @@ delete =
 
 -- Form elements
 
-{-| Docs: http://bulma.io/documentation/elements/form/
 
-__Input UI element:__
-
-    input.ui --> "input"
-
-__Display modifier:__
-
-    input.display.isInline --> "is-inline"
-
-__Size modifiers:__
-
-    input.size.isSmall --> "is-small"
-    input.size.isMedium --> "is-medium"
-    input.size.isLarge --> "is-large"
-
-__State modifiers:__
-
-    input.state.isHovered --> "is-hovered"
-    input.state.isFocused --> "is-focused"
-    input.state.isActive --> "is-active"
-    input.state.isLoading --> "is-loading"
-    input.state.isDisabled --> "is-disabled"
-
-__Color modifiers:__
-
-    input.color.isPrimary --> "is-primary"
-    input.color.isInfo --> "is-info"
-    input.color.isSuccess --> "is-success"
-    input.color.isWarning --> "is-warning"
-    input.color.isDanger --> "is-danger"
-    input.color.isWhite --> "is-white"
-    input.color.isLight --> "is-light"
-    input.color.isDark --> "is-dark"
-    input.color.isBlack --> "is-black"
-
-__Addon input modifier:__
-
-    input.addon.isExpanded --> "is-expanded"
--}
 input : Input
 input =
   { ui = "input"
@@ -660,42 +294,7 @@ input =
     }
   }
 
-{-| Docs: http://bulma.io/documentation/elements/form/
 
-__Textarea UI element:__
-
-    textarea.ui --> "textarea"
-
-__Display modifier:__
-
-    textarea.display.isInline --> "is-inline"
-
-__Size modifiers:__
-
-    textarea.size.isSmall --> "is-small"
-    textarea.size.isMedium --> "is-medium"
-    textarea.size.isLarge --> "is-large"
-
-__State modifiers:__
-
-    textarea.state.isHovered --> "is-hovered"
-    textarea.state.isFocused --> "is-focused"
-    textarea.state.isActive --> "is-active"
-    textarea.state.isLoading --> "is-loading"
-    textarea.state.isDisabled --> "is-disabled"
-
-__Color modifiers:__
-
-    textarea.color.isPrimary --> "is-primary"
-    textarea.color.isInfo --> "is-info"
-    textarea.color.isSuccess --> "is-success"
-    textarea.color.isWarning --> "is-warning"
-    textarea.color.isDanger --> "is-danger"
-    textarea.color.isWhite --> "is-white"
-    textarea.color.isLight --> "is-light"
-    textarea.color.isDark --> "is-dark"
-    textarea.color.isBlack --> "is-black"
--}
 textarea : Textarea
 textarea =
   { ui = "textarea"
@@ -728,17 +327,7 @@ textarea =
     }
   }
 
-{-| Docs: http://bulma.io/documentation/elements/form/
 
-__Checkbox UI element:__
-
-    checkbox.ui --> "checkbox"
-
-__State modifier:__
-
-    checkbox.state.isDisabled --> "is-disabled"
-
--}
 checkbox : Checkbox
 checkbox =
   { ui = "checkbox"
@@ -747,17 +336,7 @@ checkbox =
     }
   }
 
-{-| Docs: http://bulma.io/documentation/elements/form/
 
-__Radio UI element:__
-
-    radio.ui --> "radio"
-
-__State modifier:__
-
-    radio.state.isDisabled --> "is-disabled"
-
--}
 radio : Radio
 radio =
   { ui = "radio"
@@ -766,31 +345,7 @@ radio =
     }
   }
 
-{-| Docs: http://bulma.io/documentation/elements/form/
 
-__Select UI element:__
-
-    select.ui --> "select"
-
-__Size modifiers:__
-
-    select.size.isSmall --> "is-small"
-    select.size.isMedium --> "is-medium"
-    select.size.isLarge --> "is-large"
-
-__State modifiers:__
-
-    select.state.isHovered --> "is-hovered"
-    select.state.isFocused --> "is-focused"
-    select.state.isActive --> "is-active"
-    select.state.isLoading --> "is-loading"
-    select.state.isDisabled --> "is-disabled"
-
-__Addon select modifier:__
-
-    select.addon.isExpanded --> "is-expanded"
-
--}
 select : Select
 select =
   { ui = "select"
@@ -812,37 +367,13 @@ select =
     }
   }
 
-{-| Docs: http://bulma.io/documentation/elements/form/
 
-__UI element label:__
-
-    label.ui --> "label"
-
--}
 label : Label
 label =
   { ui = "label"
   }
 
-{-| Docs: http://bulma.io/documentation/elements/form/
 
-__UI element help text:__
-
-    help.ui --> "help"
-
-__Color modifiers:__
-
-    help.color.isPrimary --> "is-primary"
-    help.color.isInfo --> "is-info"
-    help.color.isSuccess --> "is-success"
-    help.color.isWarning --> "is-warning"
-    help.color.isDanger --> "is-danger"
-    help.color.isWhite --> "is-white"
-    help.color.isLight --> "is-light"
-    help.color.isDark --> "is-dark"
-    help.color.isBlack --> "is-black"
-
--}
 help : Help
 help =
   { ui = "help"
@@ -861,27 +392,7 @@ help =
 
 -- Indicators
 
-{-| *Bold notification blocks, to alert your users of something.*
 
-Docs: http://bulma.io/documentation/elements/notification/
-
-__Notification UI element:__
-
-    notification.ui --> "notification"
-
-__Color modifiers:__
-
-    notification.color.isPrimary --> "is-primary"
-    notification.color.isInfo --> "is-info"
-    notification.color.isSuccess --> "is-success"
-    notification.color.isWarning --> "is-warning"
-    notification.color.isDanger --> "is-danger"
-    notification.color.isWhite --> "is-white"
-    notification.color.isLight --> "is-light"
-    notification.color.isDark --> "is-dark"
-    notification.color.isBlack --> "is-black"
-
--}
 notification : Notification
 notification =
   { ui = "notification"
@@ -898,33 +409,7 @@ notification =
     }
   }
 
-{-| *Native HTML progress bars.*
 
-Docs: http://bulma.io/documentation/elements/progress/
-
-__Progress UI element:__
-
-    progress.ui --> "progress"
-
-__Size modifiers:__
-
-    progress.size.isSmall --> "is-small"
-    progress.size.isMedium --> "is-medium"
-    progress.size.isLarge --> "is-large"
-
-__Color modifiers:__
-
-    progress.color.isPrimary --> "is-primary"
-    progress.color.isInfo --> "is-info"
-    progress.color.isSuccess --> "is-success"
-    progress.color.isWarning --> "is-warning"
-    progress.color.isDanger --> "is-danger"
-    progress.color.isWhite --> "is-white"
-    progress.color.isLight --> "is-light"
-    progress.color.isDark --> "is-dark"
-    progress.color.isBlack --> "is-black"
-
--}
 progress : Progress
 progress =
   { ui = "progress"
@@ -946,32 +431,7 @@ progress =
     }
   }
 
-{-| *Small tag labels to insert anywhere.*
 
-Docs: http://bulma.io/documentation/elements/tag/
-
-__Tag UI element:__
-
-    tag.ui --> "tag"
-
-__Size modifiers:__
-
-    tag.size.isMedium --> "is-medium"
-    tag.size.isLarge --> "is-large"
-
-__Color modifiers:__
-
-    tag.color.isPrimary --> "is-primary"
-    tag.color.isInfo --> "is-info"
-    tag.color.isSuccess --> "is-success"
-    tag.color.isWarning --> "is-warning"
-    tag.color.isDanger --> "is-danger"
-    tag.color.isWhite --> "is-white"
-    tag.color.isLight --> "is-light"
-    tag.color.isDark --> "is-dark"
-    tag.color.isBlack --> "is-black"
-
--}
 tag : Tag
 tag =
   { ui = "tag"
@@ -993,12 +453,7 @@ tag =
   }
 
 
-{-| Special formatting for numerical output
 
-__Number UI element:__
-
-    number.ui --> "number"
--}
 number : Number
 number =
   { ui = "number"
@@ -1007,20 +462,7 @@ number =
 
 -- Page layout components
 
-{-| *A simple container to divide your page into sections.*
 
-Docs: http://bulma.io/documentation/layout/section/
-
-__Page section:__
-
-    section.container --> "section"
-
-__Spacing modifiers:__
-
-    section.spacing.isMedium --> "is-medium"
-    section.spacing.isLarge --> "is-large"
-
--}
 section : Section
 section =
   { container = "section"
@@ -1030,59 +472,13 @@ section =
     }
   }
 
-{-| *A simple responsive footer which can include anything: lists, headings,
-columns, icons, buttons...*
 
-Docs: http://bulma.io/documentation/layout/footer/
-
-__Page footer:__
-
-    footer.container --> "footer"
-
--}
 footer : Footer
 footer =
   { container = "footer"
   }
 
-{-| *A responsive horizontal nav bar that can contain links, tabs, buttons,
-icons, and a logo.*
 
-Docs: http://bulma.io/documentation/components/nav/
-
-__Nav container:__
-
-    nav.container --> "nav"
-
-__Nav partitions:__
-
-    nav.left --> "nav-left"
-    nav.center --> "nav-center"
-    nav.right --> "nav-right"
-
-__Nav responsive components:__
-
-    nav.toggle --> "nav-toggle"
-    nav.menu.container --> "nav-menu"
-
-    -- State modifier (menu)
-      nav.menu.state.isActive --> "is-active"
-
-__Nav items:__
-
-    nav.item.container --> "nav-item"
-
-    -- Style modifier
-      nav.item.style.isTab --> "is-tab"
-
-    -- State modifier
-      nav.item.state.isActive --> "is-active"
-
-__Style modifier (container):__
-
-    nav.style.hasShadow --> "hasShadow"
-
--}
 nav : Nav
 nav =
   { container = "nav"
@@ -1110,48 +506,7 @@ nav =
     }
   }
 
-{-| *An imposing hero banner to showcase something.*
 
-Docs: http://bulma.io/documentation/layout/hero/
-
-__Hero banner:__
-
-    hero.container --> "hero"
-
-__Hero partitions:__
-
-    hero.head --> "hero-head"
-    hero.body --> "hero-body"
-    hero.foot --> "hero-foot"
-
-__Hero UI components:__
-
-    hero.video --> "hero-video"
-    hero.buttons --> "hero-buttons"
-
-__Style modifier (container):__
-
-    hero.style.isBold --> "is-bold"
-
-__Size modifiers (container):__
-
-    hero.size.isMedium --> "is-medium"
-    hero.size.isLarge --> "is-large"
-    hero.size.isFullheight --> "is-fullheight"
-
-__Color modifiers (container):__
-
-    hero.color.isPrimary --> "is-primary"
-    hero.color.isInfo --> "is-info"
-    hero.color.isSuccess --> "is-success"
-    hero.color.isWarning --> "is-warning"
-    hero.color.isDanger --> "is-danger"
-    hero.color.isWhite --> "is-white"
-    hero.color.isLight --> "is-light"
-    hero.color.isDark --> "is-dark"
-    hero.color.isBlack --> "is-black"
-
--}
 hero : Hero
 hero =
   { container = "hero"
@@ -1181,28 +536,7 @@ hero =
     }
   }
 
-{-| *A multi-purpose horizontal level, which can contain almost any other element.*
 
-Docs: http://bulma.io/documentation/components/level/
-
-__Level container:__
-
-    level.container --> "level"
-
-__Level partitions:__
-
-    level.left --> "level-left"
-    level.right --> "level-right"
-
-__Level items:__
-
-    level.item --> "level-item"
-
-__Responsive modifier (level container):__
-
-    level.mobile.isHorizontal --> "is-mobile"
-
--}
 level : Level
 level =
   { container = "level"
@@ -1217,18 +551,7 @@ level =
 
 -- Section layout components
 
-{-| A horizontally centered container for featured content.
 
-Docs: http://bulma.io/documentation/layout/container/
-
-__Featured content container:__
-
-    feature.container --> "container"
-
-__Sizing modifier (removes `max-width`):__
-
-    feature.sizing.isFluid --> "is-fluid"
--}
 feature : Feature
 feature =
   { container = "container"
@@ -1238,72 +561,7 @@ feature =
   }
 
 
-{-| *A simple way to build responsive columns.*
 
-Docs: http://bulma.io/documentation/grid/columns/
-
-__Columns need to be inside a container:__
-
-    columns.container --> "columns"
-
-__Each column also needs its own container:__
-
-    columns.column.container
-
-    --Column width modifiers
-    columns.column.width.isOneQuarter --> "is-one-quarter"
-    columns.column.width.isOneThird --> "is-one-third"
-    columns.column.width.isHalf --> "is-half"
-    columns.column.width.isTwoThirds --> "is-two-thirds"
-    columns.column.width.isThreeQuarters --> "is-three-quarters"
-    columns.column.width.is1 --> "is-1"
-    columns.column.width.is2 --> "is-2"
-    columns.column.width.is3 --> "is-3"
-    columns.column.width.is4 --> "is-4"
-    columns.column.width.is5 --> "is-5"
-    columns.column.width.is6 --> "is-6"
-    columns.column.width.is7 --> "is-7"
-    columns.column.width.is8 --> "is-8"
-    columns.column.width.is9 --> "is-9"
-    columns.column.width.is10 --> "is-10"
-    columns.column.width.is11 --> "is-11"
-    columns.column.width.isNarrow --> "is-narrow"
-
-    --Column offset modifiers
-    columns.column.offset.isOneQuarter --> "is-offset-one-quarter"
-    columns.column.offset.isOneThird --> "is-offset-one-third"
-    columns.column.offset.isHalf --> "is-offset-half"
-    columns.column.offset.isTwoThirds --> "is-offset-two-thirds"
-    columns.column.offset.isThreeQuarters --> "is-offset-three-quarters"
-    columns.column.offset.is1 --> "is-offset-1"
-    columns.column.offset.is2 --> "is-offset-2"
-    columns.column.offset.is3 --> "is-offset-3"
-    columns.column.offset.is4 --> "is-offset-4"
-    columns.column.offset.is5 --> "is-offset-5"
-    columns.column.offset.is6 --> "is-offset-6"
-    columns.column.offset.is7 --> "is-offset-7"
-    columns.column.offset.is8 --> "is-offset-8"
-    columns.column.offset.is9 --> "is-offset-9"
-    columns.column.offset.is10 --> "is-offset-10"
-    columns.column.offset.is11 --> "is-offset-11"
-
-__Alignment modifiers (columns container):__
-
-    columns.alignment.isCentered --> "is-centered"
-    columns.alignment.isVCentered --> "is-vcentered"
-
-__Spacing modifiers (columns container):__
-
-    columns.spacing.isMultiline --> "is-multiline"
-    columns.spacing.isGapless --> "is-gapless"
-    columns.spacing.isGrid --> "is-grid"
-
-__Display modifiers (columns container):__
-
-    columns.display.onMobile = "is-mobile"
-    columns.display.onlyDesktop = "is-desktop"
-
--}
 columns : Columns
 columns =
   { container = "columns"
@@ -1363,40 +621,7 @@ columns =
   }
 
 
-{-| *A single tile element to build 2-dimensional Metro-like, Pinterest-like, or
-whatever-you-like grids.*
 
-Docs: http://bulma.io/documentation/grid/tiles/
-
-__Nestable container for tile grids:__
-
-    tile.container --> "tile"
-
-__Tile level designators:__
-
-    tile.level.isAncestor --> "is-ancestor"
-    tile.level.isParent --> "is-parent"
-    tile.level.isChild --> "is-child"
-
-__Tile orientation designator:__
-
-    tile.orientation.isVertical --> "is-vertical"
-
-__Tile width modifiers:__
-
-    tile.width.is1 --> "is-1"
-    tile.width.is2 --> "is-2"
-    tile.width.is3 --> "is-3"
-    tile.width.is4 --> "is-4"
-    tile.width.is5 --> "is-5"
-    tile.width.is6 --> "is-6"
-    tile.width.is7 --> "is-7"
-    tile.width.is8 --> "is-8"
-    tile.width.is9 --> "is-9"
-    tile.width.is10 --> "is-10"
-    tile.width.is11 --> "is-11"
-
--}
 tile : Tile
 tile =
   { container = "tile"
@@ -1424,24 +649,7 @@ tile =
   }
 
 
-{-| *The inevitable HTML table, with special case cells.*
 
-Docs: http://bulma.io/documentation/elements/table/
-
-__Table element class:__
-
-    table.container --> "table"
-
-__Style modifiers:__
-
-    table.style.isBordered --> "is-bordered"
-    table.style.isStriped --> "is-striped"
-
-__Spacing modifier:__
-
-    table.spacing.isNarrow --> "is-narrow"
-
--}
 table : Table
 table =
   { container = "table"
@@ -1457,23 +665,7 @@ table =
 
 -- UI components for navigation/controls
 
-{-| *A simple menu, for any type of vertical navigation.*
 
-Docs: http://bulma.io/documentation/components/menu/
-
-__Menu container:__
-
-    menu.container --> "menu"
-
-__Element class for menu labels:__
-
-    menu.label --> "menu-label"
-
-__Element class for list of menu options (apply to `ul` element):__
-
-    menu.list --> "menu-list"
-
--}
 menu : Menu
 menu =
   { container = "menu"
@@ -1482,32 +674,7 @@ menu =
   }
 
 
-{-| *Simple responsive horizontal navigation tabs, with different styles.*
 
-Docs: http://bulma.io/documentation/components/tabs/
-
-__Tabs container:__
-
-    tabs.container --> "tabs"
-
-__Style modifiers:__
-
-    tabs.style.isBoxed --> "is-boxed"
-    tabs.style.isToggle --> "is-toggle"
-
-__Alignment modifier:__
-
-    tabs.alignment.isCentered --> "is-centered"
-    tabs.alignment.isRight --> "is-right"
-
-__Size modifiers:__
-
-    tabs.size.isSmall --> "is-small"
-    tabs.size.isMedium --> "is-medium"
-    tabs.size.isLarge --> "is-large"
-    tabs.size.isFullWidth --> "is-full-width"
-
--}
 tabs : Tabs
 tabs =
   { container = "tabs"
@@ -1528,25 +695,7 @@ tabs =
   }
 
 
-{-| *A composable panel, for compact controls.*
 
-Docs: http://bulma.io/documentation/components/panel/
-
-__Panel container:__
-
-    panel.container --> "panel"
-
-__Panel subcomponents:__
-
-    panel.heading --> "panel-heading"
-    panel.tabs --> "panel-tabs"
-
-    --Block subcomponent
-    panel.block.container --> "panel-block"
-    panel.block.icon --> "panel-icon"
-    panel.block.state.isActive --> "is-active"
-
--}
 panel : Panel
 panel =
   { container = "panel"
@@ -1562,6 +711,7 @@ panel =
   , block =
     { container = "panel-block"
     , icon = "panel-icon"
+    , list = "panel-list"
     , state =
       { isActive = "is-active"
       }
@@ -1569,31 +719,7 @@ panel =
   }
 
 
-{-| *A responsive, usable, and flexible pagination.*
 
-Docs: http://bulma.io/documentation/components/pagination/
-
-__Pagination container:__
-
-    pagination.container --> "pagination"
-
-__Element classes for navigation buttons:__
-
-    pagination.previous --> "pagination-previous"
-    pagination.next --> "pagination-next"
-
-__Element classes for pagination list:__
-
-    pagination.list.container --> "pagination-list"
-    pagination.list.link --> "pagination-link"
-    pagination.list.ellipsis --> "pagination-ellipsis"
-
-__Position modifiers for pagination list (pagination container):__
-
-    pagination.position.isCentered --> "is-centered"
-    pagination.position.isRight --> "is-right"
-
--}
 pagination : Pagination
 pagination =
   { container = "pagination"
@@ -1623,42 +749,14 @@ pagination =
 
 -- UI components for content/media
 
-{-| *The box element is simply a container with a shadow, a border, a radius,
-and some padding.*
 
-Docs: http://bulma.io/documentation/bulma.propertiess/box/
-
-    bulma.box --> "box"
--}
 box : Box
 box =
   { container = "box"
   }
 
 
-{-| *An all-around flexible and composable component.*
 
-Docs: http://bulma.io/documentation/components/card/
-
-__Card container:__
-
-    card.container --> "card"
-
-__Card subcomponents:__
-
-    card.image --> "card-image"
-    card.content --> "card-content"
-
-    --Header subcomponent
-    card.header.container --> "card-header"
-    card.header.title --> "card-header-title"
-    card.header.icon --> "card-header-icon"
-
-    --Footer subcomponent
-    card.footer.container --> "card-footer"
-    card.footer.item --> "card-footer-item"
-
--}
 card : Card
 card =
   { container = "card"
@@ -1676,26 +774,7 @@ card =
   }
 
 
-{-| *The famous media object prevalent in social media interfaces, but useful in
-any context.*
 
-Docs: http://bulma.io/documentation/components/media-object/
-
-__Media object container:__
-
-    media.container --> "media"
-
-__Media object partitions:__
-
-    media.left --> "media-left"
-    media.right --> "media-right"
-    media.content --> "media-content"
-
-__Size modifier (media container):__
-
-    media.size.isLarge --> "is-large"
-
--}
 media : Media
 media =
   { container = "media"
@@ -1708,32 +787,7 @@ media =
   }
 
 
-{-| *Colored message blocks, to emphasize part of your page.*
 
-Docs: http://bulma.io/documentation/components/message/
-
-__Message container:__
-
-    message.container --> "message"
-
-__Message subcomponents:__
-
-    message.header --> "message-header"
-    message.body --> "message-body"
-
-__Color modifiers (message container):__
-
-    message.color.isPrimary --> "is-primary"
-    message.color.isInfo --> "is-info"
-    message.color.isSuccess --> "is-success"
-    message.color.isWarning --> "is-warning"
-    message.color.isDanger --> "is-danger"
-    message.color.isWhite --> "is-white"
-    message.color.isLight --> "is-light"
-    message.color.isDark --> "is-dark"
-    message.color.isBlack --> "is-black"
-
--}
 message : Message
 message =
   { container = "message"
@@ -1752,37 +806,7 @@ message =
     }
   }
 
-{-| *A classic modal overlay, in which you can include any content you want.*
 
-Docs: http://bulma.io/documentation/components/modal/
-
-__Modal container:__
-
-    modal.container --> "modal"
-
-__Modal subcomponents:__
-
-    modal.background --> "modal-background"
-    modal.content --> "modal-content"
-
-    --Close UI element
-    modal.close.ui --> "modal.close"
-    modal.close.size.isSmall --> "is-small"
-    modal.close.size.isMedium --> "is-medium"
-    modal.close.size.isLarge --> "is-large"
-
-    --Card subcomponent
-    modal.card.container --> "modal-card"
-    modal.card.head --> "modal-card-head"
-    modal.card.title --> "modal-card-title"
-    modal.card.body --> "modal-card-body"
-    modal.card.foot --> "modal-card-foot"
-
-__State modifier (message container):__
-
-    modal.state.isActive --> "is-active"
-
--}
 modal : Modal
 modal =
   { container = "modal"

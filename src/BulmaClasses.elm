@@ -711,7 +711,9 @@ __Panel subcomponents:__
     --Block subcomponent
     bulma.panel.block.container --> "panel-block"
     bulma.panel.block.icon --> "panel-icon"
+    bulma.panel.block.list --> "panel-list"
     bulma.panel.block.state.isActive --> "is-active"
+
 
 Docs: http://bulma.io/documentation/components/panel/
 
