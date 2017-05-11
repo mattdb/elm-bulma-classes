@@ -1,6 +1,6 @@
 {
     "version": "2.0.1",
-    "summary": "Bulma CSS classes organized into nested record sets",
+    "summary": "Bulma CSS classes organized into one big nested record set",
     "repository": "https://github.com/danielnarey/elm-bulma-classes.git",
     "license": "BSD3",
     "source-directories": [
