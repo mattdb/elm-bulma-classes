@@ -671,7 +671,14 @@ type alias Tabs =
 type alias Panel =
   { container : String
   , heading : String
-  , tabs : String
+  , tabs :
+    { container : String
+    , tab :
+      { state :
+        { isActive : String
+        }
+      }
+    }
   , block :
     { container : String
     , icon : String

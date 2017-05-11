@@ -1551,7 +1551,14 @@ panel : Panel
 panel =
   { container = "panel"
   , heading = "panel-heading"
-  , tabs = "panel-tabs"
+  , tabs =
+    { container = "panel-tabs"
+    , tab =
+      { state =
+        { isActive = "is-active"
+        }
+      }
+    }
   , block =
     { container = "panel-block"
     , icon = "panel-icon"
@@ -1597,7 +1604,7 @@ pagination =
     , link =
       { ui = "pagination-link"
       , state =
-        { isCurrent = "is-currrent"  
+        { isCurrent = "is-currrent"
         }
       }
     , ellipsis = "pagination-ellipsis"

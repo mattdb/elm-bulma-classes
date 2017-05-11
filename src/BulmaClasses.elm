@@ -703,7 +703,10 @@ __Panel container:__
 __Panel subcomponents:__
 
     bulma.panel.heading --> "panel-heading"
-    bulma.panel.tabs --> "panel-tabs"
+
+    --Tab subcomponent
+    bulma.panel.tabs.container --> "panel-tabs"
+    bulma.panel.tabs.tab.state.isActive --> "is-active"
 
     --Block subcomponent
     bulma.panel.block.container --> "panel-block"
