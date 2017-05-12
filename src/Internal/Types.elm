@@ -651,6 +651,11 @@ type alias Menu =
 
 type alias Tabs =
   { container : String
+  , tab :
+    { state :
+      { isActive : String
+      }
+    }
   , style :
     { isBoxed : String
     , isToggle : String

@@ -678,6 +678,11 @@ menu =
 tabs : Tabs
 tabs =
   { container = "tabs"
+  , tab =
+    { state =
+      { isActive = "is-active"
+      }
+    }
   , style =
     { isBoxed = "is-boxed"
     , isToggle = "is-toggle"

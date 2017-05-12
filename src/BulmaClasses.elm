@@ -670,6 +670,10 @@ __Tabs container:__
 
     bulma.tabs.container --> "tabs"
 
+__Tab state modifier:__
+
+    bulma.tabs.tab.state.isActive --> "is-active"
+
 __Style modifiers:__
 
     bulma.tabs.style.isBoxed --> "is-boxed"
