@@ -347,6 +347,7 @@ type alias Select =
     , isFocused : String
     , isActive : String
     , isLoading : String
+    , isDisabled : String
     }
   , addon :
     { isExpanded : String

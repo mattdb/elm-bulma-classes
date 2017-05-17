@@ -351,6 +351,7 @@ select =
     , isFocused = "is-focused"
     , isActive = "is-active"
     , isLoading = "is-loading"
+    , isDisabled = "is-disabled"
     }
   , addon =
     { isExpanded = "is-expanded"
