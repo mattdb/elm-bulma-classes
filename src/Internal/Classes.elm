@@ -226,7 +226,6 @@ button =
     , isFocused = "is-focused"
     , isActive = "is-active"
     , isLoading = "is-loading"
-    , isDisabled = "is-disabled"
     }
   , color =
     { isPrimary = "is-primary"
@@ -276,7 +275,6 @@ input =
     , isFocused = "is-focused"
     , isActive = "is-active"
     , isLoading = "is-loading"
-    , isDisabled = "is-disabled"
     }
   , color =
     { isPrimary = "is-primary"
@@ -312,7 +310,6 @@ textarea =
     , isFocused = "is-focused"
     , isActive = "is-active"
     , isLoading = "is-loading"
-    , isDisabled = "is-disabled"
     }
   , color =
     { isPrimary = "is-primary"
@@ -331,18 +328,12 @@ textarea =
 checkbox : Checkbox
 checkbox =
   { ui = "checkbox"
-  , state =
-    { isDisabled = "is-disabled"
-    }
   }
 
 
 radio : Radio
 radio =
   { ui = "radio"
-  , state =
-    { isDisabled = "is-disabled"
-    }
   }
 
 
@@ -360,7 +351,6 @@ select =
     , isFocused = "is-focused"
     , isActive = "is-active"
     , isLoading = "is-loading"
-    , isDisabled = "is-disabled"
     }
   , addon =
     { isExpanded = "is-expanded"
@@ -371,6 +361,11 @@ select =
 label : Label
 label =
   { ui = "label"
+  , size =
+    { isSmall = "is-small"
+    , isMedium = "is-medium"
+    , isLarge = "is-large"
+    }
   }
 
 

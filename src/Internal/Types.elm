@@ -242,7 +242,6 @@ type alias Button =
     , isFocused : String
     , isActive : String
     , isLoading : String
-    , isDisabled : String
     }
   , color :
     { isPrimary : String
@@ -277,7 +276,6 @@ type alias Input =
     , isFocused : String
     , isActive : String
     , isLoading : String
-    , isDisabled : String
     }
   , color :
     { isPrimary : String
@@ -312,7 +310,6 @@ type alias Textarea =
     , isFocused : String
     , isActive : String
     , isLoading : String
-    , isDisabled : String
     }
   , color :
     { isPrimary : String
@@ -330,17 +327,11 @@ type alias Textarea =
 
 type alias Checkbox =
   { ui : String
-  , state :
-    { isDisabled : String
-    }
   }
 
 
 type alias Radio =
   { ui : String
-  , state :
-    { isDisabled : String
-    }
   }
 
 type alias Select =
@@ -356,7 +347,6 @@ type alias Select =
     , isFocused : String
     , isActive : String
     , isLoading : String
-    , isDisabled : String
     }
   , addon :
     { isExpanded : String
@@ -366,6 +356,11 @@ type alias Select =
 
 type alias Label =
   { ui : String
+  , size :
+    { isSmall : String
+    , isMedium : String
+    , isLarge : String
+    }
   }
 
 
