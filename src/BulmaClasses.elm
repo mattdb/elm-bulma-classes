@@ -155,7 +155,6 @@ __State modifiers:__
     bulma.button.state.isFocused --> "is-focused"
     bulma.button.state.isActive --> "is-active"
     bulma.button.state.isLoading --> "is-loading"
-    bulma.button.state.isDisabled --> "is-disabled"
 
 __Color modifiers:__
 
@@ -223,7 +222,6 @@ __State modifiers:__
     bulma.input.state.isFocused --> "is-focused"
     bulma.input.state.isActive --> "is-active"
     bulma.input.state.isLoading --> "is-loading"
-    bulma.input.state.isDisabled --> "is-disabled"
 
 __Color modifiers:__
 
@@ -268,7 +266,6 @@ __State modifiers:__
     bulma.textarea.state.isFocused --> "is-focused"
     bulma.textarea.state.isActive --> "is-active"
     bulma.textarea.state.isLoading --> "is-loading"
-    bulma.textarea.state.isDisabled --> "is-disabled"
 
 __Color modifiers:__
 
@@ -292,10 +289,6 @@ __Checkbox UI element:__
 
     bulma.checkbox.ui --> "checkbox"
 
-__State modifier:__
-
-    bulma.checkbox.state.isDisabled --> "is-disabled"
-
 Docs: http://bulma.io/documentation/elements/form/
 
 
@@ -306,10 +299,6 @@ Docs: http://bulma.io/documentation/elements/form/
 __Radio UI element:__
 
     bulma.radio.ui --> "radio"
-
-__State modifier:__
-
-    bulma.radio.state.isDisabled --> "is-disabled"
 
 Docs: http://bulma.io/documentation/elements/form/
 
@@ -414,6 +403,12 @@ Docs: http://bulma.io/documentation/elements/form/
 __UI element label:__
 
     bulma.label.ui --> "label"
+
+__Size modifiers:__
+
+    bulma.label.size.isSmall --> "is-small"
+    bulma.label.size.isMedium --> "is-medium"
+    bulma.label.size.isLarge --> "is-large"
 
 Docs: http://bulma.io/documentation/elements/form/
 
