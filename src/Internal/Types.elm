@@ -212,7 +212,7 @@ type alias Field =
 
 type alias Control =
   { container : String
-  , hasIcon :
+  , hasIcons :
     { left : String
     , right : String
     }

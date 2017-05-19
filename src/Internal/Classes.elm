@@ -192,9 +192,9 @@ field =
 control : Control
 control =
   { container = "control"
-  , hasIcon =
-    { left = "has-icon"
-    , right = "has-icon has-icon-right"
+  , hasIcons =
+    { left = "has-icons-left"
+    , right = "has-icons-right"
     }
   , state =
     { isLoading = "is-loading"

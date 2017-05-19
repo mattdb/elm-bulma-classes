@@ -380,10 +380,10 @@ __Control wrapper:__
 
     bulma.control.container --> "control"
 
-__Displaying an icon inside a form element:__
+__Displaying an icon inside a child input field:__
 
-    bulma.control.hasIcon.left --> "has-icon"
-    bulma.control.hasIcon.right --> "has-icon has-icon-right"
+    bulma.control.hasIcons.left --> "has-icons-left"
+    bulma.control.hasIcons.right --> "has-icons-right"
 
 __State modifier:__
 
