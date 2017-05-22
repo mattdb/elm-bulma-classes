@@ -607,6 +607,11 @@ type alias Level =
 
 type alias Table =
   { container : String
+  , row :
+    { state :
+      { isSelected : String
+      }
+    }
   , style :
     { isBordered : String
     , isStriped : String

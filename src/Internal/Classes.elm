@@ -654,6 +654,11 @@ tile =
 table : Table
 table =
   { container = "table"
+  , row =
+    { state =
+      { isSelected = "is-selected"
+      }
+    }
   , style =
     { isBordered = "is-bordered"
     , isStriped = "is-striped"

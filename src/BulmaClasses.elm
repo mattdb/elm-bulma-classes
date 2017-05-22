@@ -1114,6 +1114,10 @@ __Table element class:__
 
     bulma.table.container --> "table"
 
+__State modifier (table row):__
+
+    bulma.table.row.state.isSelected --> "is-selected"
+
 __Style modifiers:__
 
     bulma.table.style.isBordered --> "is-bordered"
