@@ -1,6 +1,6 @@
 ## Bulma CSS classes organized into nested record sets
 
-Bulma is "A modern CSS framework based on Flexbox" by frontend designer Jeremy Thomas ([docs](http://bulma.io/), [github](https://github.com/jgthms/bulma)). It's still under development, but appears to be moving quickly toward a stable release. This package will be updated when there is a new major release of Bulma (last update: version 0.4.0).
+Bulma is "A modern CSS framework based on Flexbox" by frontend designer Jeremy Thomas ([docs](http://bulma.io/), [github](https://github.com/jgthms/bulma)). It's still under development, but appears to be moving quickly toward a stable release. This package will be updated when there is a new major release of Bulma (last update: version 0.4.1).
 
 ### Why use Bulma?
 Bulma is a great framework to use with Elm because:

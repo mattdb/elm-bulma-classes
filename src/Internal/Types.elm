@@ -467,7 +467,12 @@ type alias Nav =
   , left : String
   , center : String
   , right : String
-  , toggle : String
+  , toggle :
+    { ui : String
+    , state :
+      { isActive : String
+      }
+    }
   , menu :
     { container : String
     , state :

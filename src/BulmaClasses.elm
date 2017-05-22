@@ -585,7 +585,11 @@ __Nav partitions:__
 
 __Nav responsive components:__
 
-    bulma.nav.toggle --> "nav-toggle"
+    bulma.nav.toggle.ui --> "nav-toggle"
+
+    -- State modifier (toggle)
+      bulma.nav.toggle.state.isActive --> "is-active"
+
     bulma.nav.menu.container --> "nav-menu"
 
     -- State modifier (menu)

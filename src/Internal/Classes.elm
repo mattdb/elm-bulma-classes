@@ -481,7 +481,12 @@ nav =
   , left = "nav-left"
   , center = "nav-center"
   , right = "nav-right"
-  , toggle = "nav-toggle"
+  , toggle =
+    { ui = "nav-toggle"
+    , state =
+      { isActive = "is-active"
+      }
+    }
   , menu =
     { container = "nav-menu"
     , state =
