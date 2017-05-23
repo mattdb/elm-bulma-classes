@@ -142,9 +142,10 @@ heading =
     , is4 = "is-4"
     , is5 = "is-5"
     , is6 = "is-6"
+    , is7 = "is-7"
     }
-  , layout =
-    { isSpaced = "is-spaced"
+  , spacing =
+    { isNormal = "is-spaced"
     }
   }
 

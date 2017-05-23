@@ -57,13 +57,18 @@ __Text styling classes:__
 
 __Size modifiers:__
 
-    bulma.heading.size.isSmall --> "is-small"
-    bulma.heading.size.isMedium --> "is-medium"
-    bulma.heading.size.isLarge --> "is-large"
+    bulma.heading.size.is1 --> "is-1"
+    bulma.heading.size.is2 --> "is-2"
+    bulma.heading.size.is3 --> "is-3"
+    bulma.heading.size.is4 --> "is-4"
+    bulma.heading.size.is5 --> "is-5"
+    bulma.heading.size.is6 --> "is-6"
+    bulma.heading.size.is7 --> "is-7"
 
-__Layout modifier:__
 
-    bulma.heading.layout.isSpaced --> "is-spaced"
+__Maintain normal spacing between title and subtitle:__
+
+    bulma.heading.spacing.isNormal --> "is-spaced"
 
 Docs: http://bulma.io/documentation/elements/title/
 

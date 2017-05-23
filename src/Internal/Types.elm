@@ -173,9 +173,10 @@ type alias Heading =
     , is4 : String
     , is5 : String
     , is6 : String
+    , is7 : String
     }
-  , layout :
-    { isSpaced : String
+  , spacing :
+    { isNormal : String
     }
   }
 
