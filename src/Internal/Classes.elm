@@ -515,8 +515,15 @@ hero =
   , head = "hero-head"
   , body = "hero-body"
   , foot = "hero-foot"
-  , video = "hero-video"
-  , buttons = "hero-buttons"
+  , video =
+    { container = "hero-video"
+    , opacity =
+      { isTransparent = "is-transparent"
+      }
+    }
+  , buttons =
+    { container = "hero-buttons"
+    }
   , style =
     { isBold = "is-bold"
     }

@@ -505,8 +505,15 @@ type alias Hero =
   , head : String
   , body : String
   , foot : String
-  , video : String
-  , buttons : String
+  , video :
+    { container : String
+    , opacity :
+      { isTransparent : String
+      }
+    }
+  , buttons :
+    { container : String
+    }
   , style :
     { isBold : String
     }

@@ -918,8 +918,12 @@ __Hero partitions:__
 
 __Hero UI components:__
 
-    bulma.hero.video --> "hero-video"
-    bulma.hero.buttons --> "hero-buttons"
+    --Background video
+    bulma.hero.video.container --> "hero-video"
+    bulma.hero.video.opacity.isTransparent --> "is-transparent"
+
+    --Button panel
+    bulma.hero.buttons.container --> "hero-buttons"
 
 __Style modifier (container):__
 
