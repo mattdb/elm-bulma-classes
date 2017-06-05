@@ -147,6 +147,7 @@ __Style modifiers:__
     bulma.button.style.isLink --> "is-link"
     bulma.button.style.isOutlined --> "is-outlined"
     bulma.button.style.isInverted --> "is-inverted"
+    bulma.button.style.isStatic --> "is-static"
 
 __Size modifiers:__
 

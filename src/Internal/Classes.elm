@@ -216,6 +216,7 @@ button =
     { isLink = "is-link"
     , isOutlined = "is-outlined"
     , isInverted = "is-inverted"
+    , isStatic = "is-static"
     }
   , size =
     { isSmall = "is-small"

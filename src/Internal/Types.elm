@@ -232,6 +232,7 @@ type alias Button =
     { isLink : String
     , isOutlined : String
     , isInverted : String
+    , isStatic : String
     }
   , size :
     { isSmall : String
