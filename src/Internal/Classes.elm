@@ -710,7 +710,7 @@ tabs =
     { isSmall = "is-small"
     , isMedium = "is-medium"
     , isLarge = "is-large"
-    , isFullWidth = "is-full-width"
+    , isFullWidth = "is-fullwidth"
     }
   }
 

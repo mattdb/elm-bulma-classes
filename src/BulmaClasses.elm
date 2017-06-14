@@ -694,7 +694,7 @@ __Size modifiers:__
     bulma.tabs.size.isSmall --> "is-small"
     bulma.tabs.size.isMedium --> "is-medium"
     bulma.tabs.size.isLarge --> "is-large"
-    bulma.tabs.size.isFullWidth --> "is-full-width"
+    bulma.tabs.size.isFullWidth --> "is-fullwidth"
 
 Docs: http://bulma.io/documentation/components/tabs/
 
