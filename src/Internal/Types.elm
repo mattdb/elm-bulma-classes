@@ -146,7 +146,7 @@ type alias Content =
 type alias Image =
   { container : String
   , size :
-    { is16X16 : String
+    { is16x16 : String
     , is24x24 : String
     , is32x32 : String
     , is48x48 : String
@@ -173,7 +173,6 @@ type alias Heading =
     , is4 : String
     , is5 : String
     , is6 : String
-    , is7 : String
     }
   , spacing :
     { isNormal : String

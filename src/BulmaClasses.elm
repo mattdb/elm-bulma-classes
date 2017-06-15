@@ -63,7 +63,6 @@ __Size modifiers:__
     bulma.heading.size.is4 --> "is-4"
     bulma.heading.size.is5 --> "is-5"
     bulma.heading.size.is6 --> "is-6"
-    bulma.heading.size.is7 --> "is-7"
 
 
 __Maintain normal spacing between title and subtitle:__
@@ -105,7 +104,7 @@ __Image wrapper:__
 
 __Size modifiers:__
 
-    bulma.image.size.is16X16 --> "is-16x16"
+    bulma.image.size.is16x16 --> "is-16x16"
     bulma.image.size.is24x24 --> "is-24x24"
     bulma.image.size.is32x32 --> "is-32x32"
     bulma.image.size.is48x48 --> "is-48x48"

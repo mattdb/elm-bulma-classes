@@ -112,7 +112,7 @@ image : Image
 image =
   { container = "image"
   , size =
-    { is16X16 = "is-16x16"
+    { is16x16 = "is-16x16"
     , is24x24 = "is-24x24"
     , is32x32 = "is-32x32"
     , is48x48 = "is-48x48"
@@ -142,7 +142,6 @@ heading =
     , is4 = "is-4"
     , is5 = "is-5"
     , is6 = "is-6"
-    , is7 = "is-7"
     }
   , spacing =
     { isNormal = "is-spaced"
