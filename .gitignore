@@ -5,3 +5,5 @@ elm-stuff
 repl-temp-*
 # generated documentation
 documentation.json
+# Vim undo files
+*.un~
